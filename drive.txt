@@ -1,0 +1,11 @@
+sed -i 's/pinMode/gpioSetMode/g' src/Drive.h;
+sed -i 's/digitalWrite/gpioWrite/g' src/Drive.h;
+sed -i 's/HIGH/1/g' src/Drive.h;
+sed -i 's/LOW/0/g' src/Drive.h;
+sed -i 's/pwmWrite/gpioPWM/g' src/Drive.h;
+
+sed -i 's/gpioSetMode/pinMode/g' src/Drive.h
+sed -i 's/gpioWrite/digitalWrite/g' src/Drive.h
+sed -i 's/, 1)/, HIGH)/g' src/Drive.h
+sed -i 's/, 0)/, LOW)/g' src/Drive.h
+sed -i 's/gpioPWM/pwmWrite/g' src/Drive.h

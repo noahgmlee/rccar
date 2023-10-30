@@ -1,0 +1,9 @@
+echo ‘options bluetooth disable_ertm=Y’ | sudo tee -a /etc/modprobe.d/bluetooth.conf
+sudo bluetoothctl
+agent on
+default-agent
+scan on //mac address should appear once xbox controller is found
+connect YOUR MAC ADDRESS //only need once
+trust YOUR MAC ADDRESS //only need once
+
+MAC is 98:7A:14:5C:40:5B
